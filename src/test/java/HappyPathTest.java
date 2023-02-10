@@ -1,6 +1,5 @@
-import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Selenide.$;
@@ -10,7 +9,7 @@ public class HappyPathTest {
 
     @Test
     void shouldSendSimpleSurname() {
-        open("http://localhost:9999/");
+        open("http://localhost:7777/");
         $("span[data-test-id=name] input").setValue("Николай Гоголь");
         $("span[data-test-id=phone] input").setValue("+79211712862");
         $("label[data-test-id=agreement]").click();
@@ -20,7 +19,7 @@ public class HappyPathTest {
 
     @Test
     void shouldSendComplexSurname() {
-        open("http://localhost:9999/");
+        open("http://localhost:7777/");
         $("span[data-test-id=name] input").setValue("Кузьма Петров-Водкин");
         $("span[data-test-id=phone] input").setValue("+79111111111");
         $("label[data-test-id=agreement]").click();
@@ -30,7 +29,7 @@ public class HappyPathTest {
 
     @Test
     void shouldSendYoName() {
-        open("http://localhost:9999/");
+        open("http://localhost:7777/");
         $("span[data-test-id=name] input").setValue("Ли Вэй");
         $("span[data-test-id=phone] input").setValue("+71234567890");
         $("label[data-test-id=agreement]").click();
@@ -40,7 +39,7 @@ public class HappyPathTest {
 
     @Test
     void shouldSendLongSurname() {
-        open("http://localhost:9999/");
+        open("http://localhost:7777/");
         $("span[data-test-id=name] input").setValue("Дженифер Аийильцикликирмибайрактазийанкаграманоглу");
         $("span[data-test-id=phone] input").setValue("+74444444444");
         $("label[data-test-id=agreement]").click();
